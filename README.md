@@ -40,14 +40,12 @@ prefix=$(basename $r1 .bam)
 samtools coverage $r1 -o ${prefix}.tsv
 done ;
 mkdir tsv ;
-mv *.tsv tsv/ ;
-cp coverage_summary.R tsv/ ; 
-cd tsv/ ; 
+mv *.tsv tsv/ ; 
 
 #6# R summary #
 Rscript coverage_summary.R ; 
 ls -lh ;
-exit
+exit 
 ```
 
 # Output 
