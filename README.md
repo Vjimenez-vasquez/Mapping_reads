@@ -47,7 +47,7 @@ cat coverage.tsv ;
 ls ;
 ```
 
-#6# R summary #
+# 6: R summary #
 ```r
 Rscript coverage_summary.R ; 
 ls -lh ;
