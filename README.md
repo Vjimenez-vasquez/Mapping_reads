@@ -40,9 +40,15 @@ prefix=$(basename $r1 .bam)
 samtools coverage $r1 -o ${prefix}.tsv
 done ;
 mkdir tsv ;
-mv *.tsv tsv/ ; 
+mv *.tsv tsv/ ;
+cd tsv/ ;
+grep -v "#" *tsv | tr "\t" "," | tr ":" "," | sed -e 's/.tsv//g' | sed '1i sample reference startpos endpos numreads covbases coverage meandepth meanbaseq meanmapq' | tr " " "," > coverage.csv
+cat coverage.tsv ;
+ls ;
+```
 
 #6# R summary #
+```r
 Rscript coverage_summary.R ; 
 ls -lh ;
 exit 
