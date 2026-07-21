@@ -109,7 +109,7 @@ genome = genome in fasta format
 flag = number according to https://broadinstitute.github.io/picard/explain-flags.html
 ```
 
-# 6: ACTUALIZACION DEL 21/07/26
+# 6: ACTUALIZACION DEL 21/07/26: "command3.sh"
 ```r
 #!/usr/bin/bash
 
