@@ -153,3 +153,19 @@ fi
 ## ./command3.sh aligned ##
 ## ./command3.sh no_aligned ##
 ```
+
+# 7: TO EXTRACT ONLY MAPPED READS IN A NEW BAM-FILE 
+```r
+for s1 in *.bam
+do
+p1=$(basename $s1 _references.bam)
+echo "  "
+echo "WORKING SAMPLE $p1 ..."
+echo "  "
+samtools view -b -F 4 $s1 -o ${p1}.mapped.bam ;
+samtools index ${p1}.mapped.bam ;
+done
+echo "  "
+echo "DONE!"
+echo "  "
+```
